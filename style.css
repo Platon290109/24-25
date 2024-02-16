@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, ol{
+    list-style: none;
+}
+.div{
+/* visibility: hidden;
+opacity: 0; */
+pointer-events: none;
+}
+.div-div{
+    width: 528px;
+    height: 581px;
+    top: 221px;
+    left: 536px;
+    border-radius: 4px;
+    
+}
+.div-div-p{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    width: 448px;
+    height: 23px;
+    top: 261px;
+    left: 576px;
+    color: blue;
+}
+.div {
+    position: fixed;
+  
+    /* width: 100vw;
+    height: 100vh; */
+  
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(234, 153, 20, 0.6);
+    /* opacity = прозорість .1 =  елемент видимий*/
+    opacity: 1;
+    transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+    /* background-color: rgb(255, 0, 0); */
+  }
+  
+  .no-scroll {
+    overflow: hidden;
+  }
+  
+  .is-hidden {
+    /* opacity: 0 не видно , opacity 1 видно. також підтримуються числа від 0 до 1 з плаваючою крапкою */
+    opacity: 0;
+    /* visibility: hidden; */
+    /* Забороняє кліки по модалці та будь-які інші івенти мишки */
+    pointer-events: none;
+  }
+  
+  /* Звертання до модального вікна у той час як воно приховане */
+  
+  .div.is-hidden .div-div {
+    transform: translate(-50%, -50%) scale(0) rotate(0) skew(20deg, 25deg);
+  }
+  
+  .div-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    width: 528px;
+    height: 581px;
+  
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    padding: 40px;
+    transform: translate(-50%, -50%) scale(1) rotate(360deg) skew(0, 0);
+    transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    background-color: rgb(214, 1, 214);
+  }
