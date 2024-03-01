@@ -10,7 +10,7 @@ ul, ol{
 .div{
 /* visibility: hidden;
 opacity: 0; */
-pointer-events: none;
+/* pointer-events: none; */
 }
 .div-div{
     width: 528px;
@@ -43,9 +43,9 @@ pointer-events: none;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(234, 153, 20, 0.6);
+    background-color: black;
     /* opacity = прозорість .1 =  елемент видимий*/
-    opacity: 1;
+    opacity: 0,5;
     transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1);
     /* background-color: rgb(255, 0, 0); */
   }
